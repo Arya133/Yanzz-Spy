@@ -2,7 +2,7 @@
 local Configuration = {
 	UseWorkspace = false,
 	NoActors = false,
-	FolderName = "Sigma Spy",
+	FolderName = "Yanz Spy",
 	RepoUrl = nil,
 	ParserUrl = nil
 }
@@ -33,10 +33,10 @@ local Files = (function()
 --// Module
 local Files = {
 	UseWorkspace = false,
-	Folder = "Sigma spy",
+	Folder = "Yanz Spy",
 	RepoUrl = nil,
 	FolderStructure = {
-		["Sigma Spy"] = {
+		["Yanz Spy"] = {
 			"assets",
 		}
 	}
@@ -358,7 +358,7 @@ Files:LoadModules(Modules, {
 --// ReGui Create window
 local Window = Ui:CreateMainWindow()
 
---// Check if Sigma spy is supported
+--// Check if Yanz Spy is supported
 local Supported = Process:CheckIsSupported()
 if not Supported then
 	Window:Close()
