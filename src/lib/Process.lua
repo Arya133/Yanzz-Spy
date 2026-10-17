@@ -390,7 +390,7 @@ function Process:GetScriptFromFunc(Func: (...any) -> ...any)
     local Success, ENV = pcall(getfenv, Func)
     if not Success then return end
 
-    --// Blacklist sigma spy
+    --// Blacklist Yanzz Spy
     if self:IsSigmaSpyENV(ENV) then return end
 
     return rawget(ENV, "script")

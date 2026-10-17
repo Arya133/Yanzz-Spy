@@ -163,7 +163,7 @@ return g,h end function b:PrerenderVariables(f,g)if self.NoVariables then return
 end local h=self:CollectTableTypes(f,g)for i,j in next,h do local k=d[i]if k
 then k(self,j)end end end return b end end local b,c={Version='1.0.8',Author=
 'Jsssiee',License='GNU-GPLv3',Repository=
-'Embedded Sigma Spy parser',ImportUrl=nil,
+'Embedded Yanzz Spy parser',ImportUrl=nil,
 Modules={Formatter=a.load'a',Parser=a.load'b',Variables=a.load'c'}},function(b,c
 )for d,e in next,c do b[d]=e end end function b:New(d)local e=self.Modules local
 f={Variables=e.Variables.new(),Formatter=e.Formatter.new(),Parser=e.Parser.new()

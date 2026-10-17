@@ -1,6 +1,6 @@
 local Ui = {
 	DefaultEditorContent = [=[--[[
-	Sigma Spy, written by depso
+	Yanzz SPY, based on the original project by depso
 	Hooks rewritten and many more fixes!
 
 	Discord: https://discord.gg/bkUkm2vSbv
@@ -185,7 +185,7 @@ function Ui:FontWasSuccessful()
 	self:ShowModal({
 		"Unfortunately your executor was unable to download the font and therefore switched to the Dark theme",
 		"\nIf you would like to use the ImGui theme, \nplease download the font (assets/ProggyClean.ttf)",
-		"and put put it in your workspace folder\n(Sigma Spy/assets)"
+		"and put put it in your workspace folder\n(Yanzz Spy/assets)"
 	})
 end
 
@@ -302,7 +302,7 @@ function Ui:ShowModal(Lines: table)
 
 	--// Modal Window
 	local ModalWindow = Window:PopupModal({
-		Title = "Sigma Spy"
+		Title = "Yanzz SPY"
 	})
 	ModalWindow:Label({
 		Text = Message,
@@ -319,7 +319,7 @@ end
 
 function Ui:ShowUnsupportedExecutor(Name: string)
 	Ui:ShowModal({
-		"Unfortunately Sigma Spy is not supported on your executor",
+		"Yanzz SPY is not supported on your executor",
 		"The best free option is Swift (discord.gg/getswiftgg)",
 		`\nYour executor: {Name}`
 	})
@@ -327,7 +327,7 @@ end
 
 function Ui:ShowUnsupported(FuncName: string)
 	Ui:ShowModal({
-		"Unfortunately Sigma Spy is not supported on your executor",
+		"Yanzz SPY is not supported on your executor",
 		`\nMissing function: {FuncName}`
 	})
 end
@@ -417,7 +417,7 @@ function Ui:CreateElements(Parent, Options)
 	end
 end
 
---// Boiiii what did you say about Sigma Spy 💀💀
+--// Boiiii what did you say about Yanzz Spy 💀💀
 function Ui:DisplayAura()
     local Window = self.Window
     local Rand = self.RandomSeed
@@ -427,7 +427,7 @@ function Ui:DisplayAura()
     local AURADELAY = Rand:NextInteger(1, 5)
 
 	--// Title
-	local Title = `Sigma Spy | AURA: {AURA}`
+	local Title = `Yanzz SPY | AURA: {AURA}`
 	local Seasonal = self:TurnSeasonal(Title)
     Window:SetTitle(Seasonal)
 
@@ -584,7 +584,7 @@ function Ui:MakeOptionsTab(InfoSelector)
 			{
 				Text = "Copy Github",
 				Callback = function()
-					self:SetClipboard("Sigma Spy")
+					self:SetClipboard("Yanzz SPY")
 				end,
 			},
 			{
@@ -610,7 +610,7 @@ function Ui:AddDetailsSection(OptionsTab)
 	OptionsTab:Separator({Text="Information"})
 	OptionsTab:BulletText({
 		Rows = {
-			"Original Sigma Spy by depso",
+			"Yanzz SPY | based on the original project by depso",
 			"Forked and rebuilt by egoDtheTurtle",
 			"Bundled: FastlyParse-based parser and Dear-ReGui"
 		}
@@ -686,7 +686,7 @@ function Ui:MakeEditorTab(InfoSelector)
 				Text = "Pop-out",
 				Callback = function()
 					local Script = CodeEditor:GetText()
-					local Tile = ActiveData and ActiveData.Task or "Sigma Spy"
+					local Tile = ActiveData and ActiveData.Task or "Yanzz SPY"
 					self:MakeEditorPopoutWindow(Script, {
 						Title = Tile
 					})
@@ -748,7 +748,7 @@ function Ui:EditFile(FilePath: string, InFolder: boolean, OnSaveFunc: ((table, s
 	local Folder = Files.FolderName
 	local CodeEditor, Window
 
-	--// Relative to Sigma Spy folder
+	--// Relative to Yanzz Spy folder
 	if InFolder then
 		FilePath = `{Folder}/{FilePath}`
 	end
@@ -840,7 +840,7 @@ function Ui:MakeTableHeaders(Table, Rows: table)
 end
 
 function Ui:Decompile(Editor: table, Script: Script)
-	local Header = "--BOOIIII THIS IS SO TUFF FLIPPY SKIBIDI AURA (SIGMA SPY)"
+	local Header = "-- YANZZ SPY"
 	Editor:SetText("--Decompiling... +9999999 AURA (mango phonk)")
 
 	--// Decompile script
@@ -942,7 +942,7 @@ function Ui:SetFocusedRemote(Data)
 	Data.Selectable:SetSelected(true)
 
 	local function SetIDEText(Content: string, Task: string?)
-		Data.Task = Task or "Sigma Spy"
+		Data.Task = Task or "Yanzz SPY"
 		CodeEditor:SetText(Content)
 	end
 	local function DataConnection(Name, ...)

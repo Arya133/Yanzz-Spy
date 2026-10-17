@@ -15,7 +15,7 @@ type RemoteData = {
 
 --// Module
 local Generation = {
-	DumpBaseName = "SigmaSpy-Dump %s.lua", -- "-- Generated with sigma spy BOIIIIIIIII (+9999999 AURA)\n"
+	DumpBaseName = "YanzzSpy-Dump %s.lua", -- "-- Generated with Yanzz Spy BOIIIIIIIII (+9999999 AURA)\n"
 	Header = "",
 	ScriptTemplates = {
 		["Remote"] = {
